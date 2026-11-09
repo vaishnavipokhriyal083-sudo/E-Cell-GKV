@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # E-Cell GKV - Official Web Portal & Innovation Platform
 
 The official web platform of the **Entrepreneurship Cell (E-Cell)** at **Gurukula Kangri (Deemed to be University), Haridwar, Uttarakhand**.
@@ -102,3 +103,6 @@ ecell-gkv/
 
 ## 🏛️ About Gurukula Kangri Vishwavidyalaya
 Gurukula Kangri (Deemed to be University) was founded on March 4, 1902, by Swami Shraddhanandaji with the objective of providing an indigenous alternative to Lord Macaulay’s British education system. Today, E-Cell GKV takes this vision forward by empowering students to become ethical founders and job creators.
+=======
+# E-Cell-GKV
+>>>>>>> 50ad460210dfcf92d6603a9cebfb07475431b49d
