@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Rocket, Sparkles, ChevronRight } from 'lucide-react';
+import logo from "./LOGO.png";
 
 export default function Navbar({ onOpenJoinModal, onOpenPitchModal }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,15 +25,25 @@ export default function Navbar({ onOpenJoinModal, onOpenPitchModal }) {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled 
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 
+
+      //${scrolled ? '...' : '...'}
+      //condition ? value_if_true : value_if_false
+
+      ${scrolled 
         ? 'bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80 shadow-lg shadow-black/20 py-3' 
         : 'bg-transparent py-5'
     }`}>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
+
+          
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
+
+          <img src={logo} alt="E-CELL GKV Logo" className="h-12 w-auto" />
+         
+           <a href="#" className="flex items-center gap-3 group">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 via-teal-500 to-amber-400 p-0.5 shadow-md shadow-emerald-900/40 group-hover:scale-105 transition-transform">
               <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
                 <Rocket className="w-5 h-5 text-emerald-400 group-hover:rotate-12 transition-transform duration-300" />
@@ -48,24 +59,25 @@ export default function Navbar({ onOpenJoinModal, onOpenPitchModal }) {
                 </span>
               </div>
               <p className="text-[10px] text-slate-400 tracking-wider uppercase font-medium">
-                Gurukula Kangri (Deemed to be Univ.)
+                GURUKUL KANGRI (DEEMED TO BE UNIERSITY)
               </p>
             </div>
           </a>
+          
 
           {/* Desktop Links */}
-          <div className="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <div className="hidden lg:flex items-center gap-10 text-sm font-medium text-slate-300">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="hover:text-emerald-400 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-emerald-400 after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+                className="hover:text-emerald-500 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-emerald-400 after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
               >
                 {link.name}
               </a>
             ))}
           </div>
-
+ 
           {/* Action CTAs */}
           <div className="hidden sm:flex items-center gap-3">
             <button
